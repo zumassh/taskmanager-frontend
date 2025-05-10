@@ -1,0 +1,57 @@
+.app {
+    background-color: #FFFCF5;
+    color: #323459;
+    min-height: 100vh;
+  }
+  
+  .app-header {
+    min-height: 30px;
+    padding: 0px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .exit-button {
+    font-size: 24px;
+    background-color: transparent;
+    border: 2px solid #323459;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .exit-button:hover {
+    background-color: #323459;
+    color: #FFFCF5;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .main {
+    min-height: calc(100vh - 100px);
+    display: grid;
+    margin: 10px 40px;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+  
+  .block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .info-block {
+    grid-column: 2;
+  }
+  
+  .stats-block {
+    grid-column: 3;
+  }
+
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.matrix-svg:hover, .pie-svg:hover {
+  outline: 3px solid #94D2BC;
+}

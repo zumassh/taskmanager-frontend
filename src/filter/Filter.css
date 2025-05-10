@@ -1,0 +1,77 @@
+.filter-container {
+    background-color: #F3EDDF;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    padding-top: 0px;
+    min-width: 60%;
+    margin-top: 10px;
+}
+
+.filter-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.close-button {
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.close-button:active {
+    background-color: #FFFCF5;
+}
+
+.buttons-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.apply-button {
+    font-size: 20px;
+    background-color: #b8ecd9;
+}
+
+.apply-button:hover {
+    background-color: #a5e1cc;
+}
+
+.apply-button:active {
+    background-color: #94D2BC;
+}
+
+.reset-button {
+    font-size: 20px;
+    background-color: #ecb8b8;
+    border-color: #d29494;
+}
+
+.reset-button:hover {
+    background-color: #e1a5a5;
+}
+
+.reset-button:active {
+    background-color: #d29494;
+}
+
+.sort-block {
+    display: flex;
+    justify-content: space-around;
+}
+
+.sort-options, .sort-direction {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.filters {
+    display: flex;
+    gap: 12px;
+}

@@ -1,0 +1,112 @@
+.tasks-block {
+    grid-column: 1;
+}
+
+.filter-panel {
+    margin: 10px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.input-container {
+    position: relative;
+    background-color: #F3EDDF;
+}
+
+.search-input {
+    background-color: transparent;
+    border-color: #CFC8B7;
+}
+
+.search-icon {
+    position: absolute;
+    top: 5px;
+}
+
+.tasks-list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tasks-list {
+    list-style: none;
+    padding: 0;
+}
+
+.list-element {
+    width: calc(100% - 10px);
+    min-height: 2em;
+    padding-left: 10px;
+    background-color: #F3EDDF;
+    color: #000;
+    font-size: 20px;
+    margin: 10px 0;
+    align-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.list-element:hover {
+    outline: 3px solid #94D2BC;
+}
+
+.list-element.overdue {
+    background-color: #ffcccc;
+}
+
+.list-element.urgent {
+    background-color: #ffdeab;
+}
+
+.list-element.normal {
+    background-color: #ebffd5;
+}
+
+.list-element.done {
+    background-color: #eeeeee;
+    text-decoration: line-through;
+    color: gray;
+}
+
+.list-element div {
+    padding-right: 30px;
+}
+
+.create-button {
+    width: 100%;
+    font-size: 24px;
+}
+
+.button {
+    border: 3px solid #94D2BC;
+    background-color: #F3EDDF;
+}
+
+.button:hover {
+    background-color: #b8ecd9;
+    transition: 0.5s ease-in-out;
+}
+
+.button:active {
+    background-color: #94D2BC;
+}
+
+.status-square {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: #FFFCF5;
+    border: 1px solid #CFC8B7;
+    cursor: pointer;
+}
+.status-square svg {
+    width: 12px;
+    height: 12px;
+}

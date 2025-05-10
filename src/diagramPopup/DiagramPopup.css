@@ -1,0 +1,88 @@
+.popup-container {
+    background-color: #F3EDDF;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    padding-top: 0px;
+    min-width: 80%;
+    margin-top: 10px;
+}
+
+.popup-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.close-button {
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.close-button:active {
+    background-color: #FFFCF5;
+}
+
+.matrix-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.matrix {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+    width: 100%;
+    min-height: 60vh;
+}
+
+.quadrant {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.important-urgent {
+    background-color: #FFD0E1;
+}
+
+.important-noturgent {
+    background-color: #FFDBCC;
+}
+
+.notimportant-urgent {
+    background-color: #D3F3FF;
+}
+
+.notimportant-noturgent {
+    background-color: #DCFEDA;
+}
+
+.task-card {
+    background-color: #F3EDDF;
+    font-size: 16px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.task-card:hover {
+    outline: 3px solid #94D2BC;
+}
+
+.pie-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recharts-default-legend {
+    background-color: #9f9783;
+}

@@ -1,0 +1,18 @@
+.form-container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FFFCF5;
+}
+
+.form-container {
+    margin: auto;
+    padding: 20px 50px;
+    background-color: #F3EDDF;
+    border: 3px solid #94D2BC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
