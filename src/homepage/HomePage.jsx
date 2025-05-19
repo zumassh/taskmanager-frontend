@@ -50,13 +50,13 @@ function HomePage() {
 
     Object.keys(filters.priorityFilters).forEach(level => {
       if (filters.priorityFilters[level]) {
-        params.append('priority', level);
+        params.append('priority[]', level);
       }
     });
 
     Object.keys(filters.statusFilters).forEach(status => {
       if (filters.statusFilters[status]) {
-        params.append('status', status);
+        params.append('status[]', status);
       }
     });
 

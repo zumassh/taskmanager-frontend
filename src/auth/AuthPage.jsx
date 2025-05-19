@@ -14,7 +14,7 @@ function AuthPage() {
     const url = isLogin ? 'http://127.0.0.1:8000/api/login/' : 'http://127.0.0.1:8000/api/register/';
     try {
       const response = await axios.post(url, { username, password });
-      const token = response.data.token;
+      const token = response.data.access_token;
       localStorage.setItem('token', token);
       setMessage('Регистрация успешна!');
       window.location.reload();
