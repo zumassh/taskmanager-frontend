@@ -1,3 +1,5 @@
+Данный репозиторий представляет реализацию клиентской части приложения по управлению задачами. Основные компоненты находятся в папке src. В данной директории представлены компоненты системы и стили для них. В целом структура соответствует классическому react-приложению.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
