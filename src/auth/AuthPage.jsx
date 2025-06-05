@@ -20,7 +20,7 @@ function AuthPage() {
       window.location.reload();
     } catch (error) {
       console.error(error);
-      setMessage(error.response?.data?.error || 'Ошибка');
+      setMessage(error.response?.data?.error || 'Ошибка: Пользователь не найден');
     }
   };
 
