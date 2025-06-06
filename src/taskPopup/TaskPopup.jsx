@@ -11,8 +11,28 @@ function TaskPopup({ task, setPopup, fetchTasks }) {
     const [status, setStatus] = useState('TODO');
     const [message, setMessage] = useState('');
 
+    const isValidDateTime = (value) => {
+        const regex = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}$/;
+        if (!value || !regex.test(value)) return false;
+
+        const date = new Date(value);
+        const timestamp = date.getTime();
+        if (isNaN(timestamp)) return false;
+
+        const min = new Date("1970-01-01T00:00");
+        const max = new Date("9999-12-31T23:59");
+
+        return date >= min && date <= max;
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        if (deadline && !isValidDateTime(deadline)) {
+            setMessage("Некорректный формат даты. Введите дату от 01.01.1970 до 31.01.9999.");
+            return;
+        }
+
         const finalDeadline = deadline === '' ? null : deadline;
         const finalDescription = description === '' ? null : description;
         const formData = { title, description: finalDescription, deadline: finalDeadline, priority, status };
@@ -30,6 +50,12 @@ function TaskPopup({ task, setPopup, fetchTasks }) {
 
     const handleUpdateSubmit = async (e) => {
         e.preventDefault();
+
+        if (deadline && !isValidDateTime(deadline)) {
+            setMessage("Некорректный формат даты. Введите дату до 31.01.9999.");
+            return;
+        }
+
         const finalDeadline = deadline === '' ? null : deadline;
         const finalDescription = description === '' ? null : description;
         const updatedData = { title, description: finalDescription, deadline: finalDeadline, priority, status };
@@ -121,6 +147,8 @@ function TaskPopup({ task, setPopup, fetchTasks }) {
                         className="form-element"
                         type="datetime-local"
                         placeholder="Дедлайн"
+                        min="1970-01-01T00:00"
+                        max="9999-12-31T23:59"
                         value={deadline}
                         onChange={e => setDeadline(e.target.value)}
                     />

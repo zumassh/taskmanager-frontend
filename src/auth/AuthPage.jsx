@@ -11,7 +11,7 @@ function AuthPage() {
 
   const handleAuth = async (e) => {
     e.preventDefault();
-    const url = isLogin ? 'http://127.0.0.1:8000/api/login/' : 'http://127.0.0.1:8000/api/register/';
+    const url = isLogin ? '/api/login' : '/api/register';
     try {
       const response = await axios.post(url, { username, password });
       const token = response.data.access_token;
@@ -20,7 +20,7 @@ function AuthPage() {
       window.location.reload();
     } catch (error) {
       console.error(error);
-      setMessage(error.response?.data?.error || 'Ошибка');
+      setMessage(error.response?.data?.error || 'Ошибка: Пользователь не найден');
     }
   };
 
