@@ -150,6 +150,8 @@ function TaskPopup({ task, setPopup, fetchTasks }) {
                         min="1970-01-01T00:00"
                         max="9999-12-31T23:59"
                         value={deadline}
+                        min="2025-05-01T00:00"
+                        max="9999-12-31T23:59"
                         onChange={e => setDeadline(e.target.value)}
                     />
 
